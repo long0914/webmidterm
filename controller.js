@@ -13,6 +13,7 @@ button.addEventListener('click', function() {
     let quantity = quantityInput.value;
     //replace spaces with underscores
     let id = name.replace(/ /g, '_');
+
     //insert row into table
     let row = table.insertRow(-1);
     row.id = id;
@@ -23,8 +24,10 @@ decreaseButtons.className = 'decrease';
 decreaseButtons.textContent = '-';
 decreaseButtons.addEventListener('click', function() {
     let quantityCell = row.cells[2];
-    let totalCell = row.cells[3];
+     let totalCell = row.cells[3];
     let quantity = parseFloat(quantityCell.textContent);
+
+    //debugging
     console.log("type of quantity" + typeof quantityCell.textContent    );
    
 
@@ -93,10 +96,8 @@ allButtons.forEach(function(button) {
 
         console.log(table.childNodes.length);
         
-
-        // Start from the second row (index 1)
         for(let i=1; i< table.rows.length; i++) {
-            // Get the value of the fourth cell (index 3), parse it to a float, and add it to the subtotal
+
             let totalvalue = parseFloat(table.rows[i].cells[3].textContent);
             subtotalvalue += totalvalue;
         }
