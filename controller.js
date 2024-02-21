@@ -33,7 +33,7 @@ decreaseButtons.addEventListener('click', function() {
 
     if (quantity > 1) {
         quantityCell.textContent = quantity - 1;
-        totalCell.textContent = price * (quantity - 1);
+        totalCell.textContent = (price * (quantity - 1)).toFixed(2); //toFixed(2) rounds to 2 decimal places
     }
 });
 
@@ -45,7 +45,7 @@ increaseButtons.addEventListener('click', function() {
     let totalCell = row.cells[3];
     let quantity = parseFloat(quantityCell.textContent);
     quantityCell.textContent = quantity + 1;
-    totalCell.textContent = price * (quantity + 1);
+    totalCell.textContent = (price * (quantity + 1)).toFixed(2); //toFixed(2) rounds to 2 decimal places
 });
 
 let deleteButtons = document.createElement('button');
@@ -102,13 +102,13 @@ allButtons.forEach(function(button) {
             subtotalvalue += totalvalue;
         }
 
-        subtotal.textContent = subtotalvalue;
+        subtotal.textContent = subtotalvalue.toFixed(2);
 
         let taxvalue = subtotalvalue * 0.13;
-        taxes.textContent = taxvalue;
+        taxes.textContent = taxvalue.toFixed(2);
 
         let grandTotalvalue = subtotalvalue + taxvalue;
-        grandTotal.textContent = grandTotalvalue;
+        grandTotal.textContent = grandTotalvalue.toFixed(2); //toFixed(2) rounds to 2 decimal places
 
 
 
