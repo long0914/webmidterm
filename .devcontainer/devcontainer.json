@@ -4,7 +4,8 @@
     "emmetio.emmet",
     "esbenp.prettier-vscode",
     "github.copilot",
-    "ritwickdey.liveserver"
+    "ritwickdey.liveserver",
+    "DigitalBrainstem.javascript-ejs-support"
 ],
 "settings": { 
     "terminal.integrated.shell.linux": "/bin/bash"

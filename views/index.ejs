@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+  
+    <!-- <form action="/example" method="get">
+        <label for="name">name</label>
+        <input type="text" id="name" name="name">
+        <label for="age">age</label>
+        <input type="number" id="age" name="age">
+        <button>submit</button>
+    </form> -->
+     
+    <table>
+        <tr>
+            <th>name</th>
+            <th>rating</th>
+            <th>popularity</th>
+            <th>type</th>
+        </tr>
+        
+            <% languages.forEach(langs => { %>
+            <tr>
+                <td><%= langs.name %></td>
+                <td><%= langs.rating %></td>
+                <td><%= langs.popularity %></td>
+                <td><%= langs.type %></td>    
+            </tr>
+         <% }); %>
+        
+    </table>
+
+    //web framework, such as java spring, ruby on rails, django, etc, are using MVC design pattern
+    
+    
+</body>
+</html>
